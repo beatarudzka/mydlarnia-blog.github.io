@@ -21,6 +21,22 @@
   padding: 0 10px;
 }
 
-.search{
+.search__form{
   display: flex;
+}
+
+.searchInput{
+  border:0;
+  width:0;
+  transition:width .1s ease-in-out;
+}
+
+.searchInput.active{
+  width:150px;
+ }
+.searchInput:focus{
+ outline:none;
+}
+.search__form--icon{
+  cursor:pointer;
 }

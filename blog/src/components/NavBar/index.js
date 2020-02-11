@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
 
 const NavBar = (props) => {
+
+
+  const [search, setSearch] = useState(false)
+
+  const submitSearch = (e) => {
+    e.preventDefault()
+    alert('ok')
+  }
+
+  const searchClass = search ? 'searchInput active' : 'searchInput'
+
+  const openSearch = () => {
+    setSearch(true)
+  }
+
   return (
     <>
       <div className="navbar">
@@ -13,8 +28,10 @@ const NavBar = (props) => {
           <li className="navbar__list--item"><a className="navbar__list--link" href="#">Aromaterapia</a></li>
         </ul>
         <div className="search">
-          <input type="text" placeholder="Szukaj na blogu..." />
-          <img alt="Search" src={require('../../assets/icons/search.png')} />
+          <form className="search__form" onSubmit={submitSearch}>
+            <input className={searchClass} type="text" placeholder="Szukaj na blogu..." />
+            <img onClick={openSearch} className="search__form--icon" alt="Search" src={require('../../assets/icons/search.png')} />
+          </form>
         </div>
       </div>
     </>
