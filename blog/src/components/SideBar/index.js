@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Card from '../UI/Card'
+import blogPost from '../../data/blog.json'
 
 import './style.css'
 
 const SideBar = (props) => {
+
+  const [post, setPost] = useState([])
+
+  useEffect(() => {
+    const post = blogPost.data
+    setPost(post)
+  }, post)
   return (
 
     <div className="sidebar__container">

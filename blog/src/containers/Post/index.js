@@ -5,13 +5,17 @@ import SideBar from '../../components/SideBar'
 
 import './style.css'
 
-const Recipes = props => {
+
+const Post = props => {
+
+  const postId = props.match.params.postId
+
   return (
     <section className="container">
-      <BlogPost />
+      <BlogPost {...props} />
       <SideBar />
     </section>
   )
 }
 
-export default Recipes
+export default Post

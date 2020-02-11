@@ -4,7 +4,7 @@ import Home from './containers/Home'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutMe from './containers/AboutMe'
-import Recipes from './containers/Recipes'
+import Post from './containers/Post'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -21,7 +21,7 @@ function App() {
         <Hero />
         <Route path="/" exact component={Home} />
         <Route path="/o_mnie" component={AboutMe} />
-        <Route path="/receptury" component={Recipes} />
+        <Route path="/Post/:postId" component={Post} />
 
       </div>
     </Router>
