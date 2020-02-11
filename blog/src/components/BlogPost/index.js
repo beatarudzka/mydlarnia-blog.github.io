@@ -8,11 +8,14 @@ const BlogPost = (props) => {
 
   const [post, setPost] = useState({})
 
+  const [postId, setPostId] = useState('')
+
   useEffect(() => {
     const postId = props.match.params.postId
     const post = blogPost.data.find(post => post.id == postId)
     setPost(post)
-  }, post)
+    setPostId(postId)
+  }, [post, props.match.params.postId])
 
   return (
     <div className="post__container">
