@@ -1,4 +1,49 @@
-.sideBar{
+.sidebar__container{
   width:27%;
-  background: #fff;
+}
+.sidebar_header{
+  text-transform: uppercase;
+  font-style: 15px;
+  text-align: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.sidebar__image{
+  width:100%;
+  box-sizing: border-box;
+}
+
+.sidebar__image--picture{
+  max-width:100%;
+  max-height: 100%;
+  margin:20px 0;
+}
+
+.sidebar__text{
+font-size: 14px;
+color: #565673;
+font-weight: 300;
+}
+
+.sidebar__recent-posts{
+  padding: 15px 0;
+}
+.recent-post__title{
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin:0;
+}
+.recent-post__date{
+  font-size: 12px;
+  font-weight: 400;
+
+}
+.recent-post{
+  border-bottom: 1px solid #eee;
+  margin:10px;
 }
