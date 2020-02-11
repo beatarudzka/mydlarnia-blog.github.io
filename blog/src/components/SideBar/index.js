@@ -4,15 +4,16 @@ import Card from '../UI/Card'
 import blogPost from '../../data/blog.json'
 
 import './style.css'
+import { NavLink } from 'react-router-dom'
 
 const SideBar = (props) => {
 
-  const [post, setPost] = useState([])
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    const post = blogPost.data
-    setPost(post)
-  }, post)
+    const posts = blogPost.data
+    setPosts(posts)
+  }, posts)
   return (
 
     <div className="sidebar__container">
@@ -38,24 +39,24 @@ const SideBar = (props) => {
         <div className="sidebar_header">
           <span>Ostatnie wpisy</span>
         </div>
-        <div className="sidebar__recent-posts">
-          <div className="recent-post">
-            <h3 className="recent-post__title">Ostatni wpis</h3>
-            <span className="recent-post__date">11 Luty, 2020</span>
-          </div>
-        </div>
-        <div className="sidebar__recent-posts">
-          <div className="recent-post">
-            <h3 className="recent-post__title">Przedostatni wpis</h3>
-            <span className="recent-post__date">11 Luty, 2020</span>
-          </div>
-        </div>
-        <div className="sidebar__recent-posts">
-          <div className="recent-post">
-            <h3 className="recent-post__title">Przed przedostatni wpis</h3>
-            <span className="recent-post__date">11 Luty, 2020</span>
-          </div>
-        </div>
+
+        {
+          posts.map(post => {
+            return (
+
+              <NavLink to={`${post.id}`}>
+                <div className="sidebar__recent-posts">
+                  <div className="recent-post">
+                    <h3 className="recent-post__title">{post.blogTitle}</h3>
+                    <span className="recent-post__date">{post.postedOn}</span>
+                  </div>
+                </div>
+              </NavLink>
+
+            )
+          })
+        }
+
       </Card>
 
     </div>
