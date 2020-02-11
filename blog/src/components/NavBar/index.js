@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+
 import './style.css'
+
+import { NavLink } from 'react-router-dom'
 
 const NavBar = (props) => {
 
@@ -21,11 +24,11 @@ const NavBar = (props) => {
     <>
       <div className="navbar">
         <ul className="navbar__list">
-          <li className="navbar__list--item"><a className="navbar__list--link" href="#">O mnie</a></li>
-          <li className="navbar__list--item"><a className="navbar__list--link" href="#">Receptury</a></li>
-          <li className="navbar__list--item"><a className="navbar__list--link" href="#">Zioła</a></li>
-          <li className="navbar__list--item"><a className="navbar__list--link" href="#">Eko styl</a></li>
-          <li className="navbar__list--item"><a className="navbar__list--link" href="#">Aromaterapia</a></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/about-me">O mnie</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/receptury">Receptury</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/zielarstwo">Zielarstwo</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/permakultura">Permakultura</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/aromaterapia">Aromaterapia</NavLink></li>
         </ul>
         <div className="search">
           <form className="search__form" onSubmit={submitSearch}>

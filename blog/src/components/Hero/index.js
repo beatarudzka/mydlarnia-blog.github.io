@@ -1,8 +1,9 @@
 import React from 'react'
 
+import './style.css'
+
 import Card from '../UI/Card'
 import Logo from '../Logo'
-import './style.css'
 import NavBar from '../NavBar'
 
 const Hero = (props) => {

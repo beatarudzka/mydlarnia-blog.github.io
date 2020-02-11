@@ -1,19 +1,30 @@
 import React from 'react'
 
 import Home from './containers/Home'
-
-import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import AboutMe from './containers/AboutMe'
+import Recipes from './containers/Recipes'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import './App.css'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <Hero />
+    <Router>
+      <div className="App">
 
-    </div>
+        <Header />
+        <Hero />
+        <Route path="/" exact component={Home} />
+        <Route path="/o_mnie" component={AboutMe} />
+        <Route path="/receptury" component={Recipes} />
+
+      </div>
+    </Router>
   )
 }
 
