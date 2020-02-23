@@ -13,7 +13,7 @@ const SideBar = (props) => {
   useEffect(() => {
     const posts = blogPost.data
     setPosts(posts)
-  }, posts)
+  }, [posts])
   return (
 
     <div className="sidebar__container">
@@ -26,7 +26,7 @@ const SideBar = (props) => {
         </div>
         <div>
           <p className="sidebar__text">
-            Aktualnie jestem zafascynowana technikami relaksacyjnymi i oddechowymi, psychologią kognitywno – poznawczą i aromaterapią emocji.Tworzę także nowe receptury mydlarskie z surowcami prosto z mojego gospodarstwa ekologicznego.
+            Aktualnie jestem zafascynowana technikami relaksacyjnymi i oddechowymi, psychologią kognitywno – poznawczą i aromaterapią emocji. Tworzę także nowe receptury mydlarskie z surowcami prosto z mojego gospodarstwa ekologicznego.
           </p>
         </div>
       </Card>
@@ -44,7 +44,7 @@ const SideBar = (props) => {
           posts.map(post => {
             return (
 
-              <NavLink to={`${post.id}`}>
+              <NavLink key={post.id} to={`${post.id}`}>
                 <div className="sidebar__recent-posts">
                   <div className="recent-post">
                     <h3 className="recent-post__title">{post.blogTitle}</h3>

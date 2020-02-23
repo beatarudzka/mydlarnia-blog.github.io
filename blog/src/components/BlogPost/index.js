@@ -6,7 +6,16 @@ import blogPost from '../../data/blog.json'
 
 const BlogPost = (props) => {
 
-  const [post, setPost] = useState({})
+  const [post, setPost] = useState({
+    id: "",
+    blogCategory: "",
+    blogTitle: "",
+    slug: "",
+    postedOn: "",
+    author: "",
+    blogImage: "",
+    blogText: "",
+  })
 
   const [postId, setPostId] = useState('')
 
@@ -16,6 +25,8 @@ const BlogPost = (props) => {
     setPost(post)
     setPostId(postId)
   }, [post, props.match.params.postId])
+
+  if (post.blogImage == "") return null
 
   return (
     <div className="post__container">
@@ -27,15 +38,15 @@ const BlogPost = (props) => {
         </div>
 
         <div className="image_container">
-          < img className="image" src={require('../../blogPostImages/img6.jpg')} alt="Aromaterapy" />
+          < img className="image" src={require('../../blogPostImages/' + post.blogImage)} alt="Post" />
         </div>
 
         <div className="post__content">
           <h3 className="post__content--title">
-
+            {post.blogTitle}
           </h3>
           <p className="post__content--text">
-
+            {post.blogText}
           </p>
         </div>
 
