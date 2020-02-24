@@ -1,5 +1,5 @@
 .post__container{
-  width:70%;
+  width:65vw;
   background: #fff;
 }
 
@@ -43,6 +43,7 @@
 
 .post__content{
   margin:30px;
+  line-height: 1.8;
 }
 
 .post__content--title{

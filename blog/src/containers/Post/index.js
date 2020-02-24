@@ -13,7 +13,7 @@ const Post = props => {
   return (
     <section className="container">
       <BlogPost {...props} />
-      <SideBar />
+
     </section>
   )
 }

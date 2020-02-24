@@ -1,5 +1,6 @@
 .sidebar__container{
-  width:27%;
+  width:25vw;
+  padding: 2rem;;
 }
 .sidebar_header{
   text-transform: uppercase;
@@ -9,6 +10,17 @@
   box-sizing: border-box;
   letter-spacing: 1px;
   color: #333;
+}
+
+.sidebar_header--social{
+  display: flex;
+  justify-content: space-around;
+  cursor:pointer;
+}
+
+.sidebar_header--icon {
+  height:2rem;
+  width:2rem;
 }
 
 .sidebar__image{
@@ -26,6 +38,7 @@
 font-size: 14px;
 color: #565673;
 font-weight: 300;
+
 }
 
 .sidebar__recent-posts{
@@ -46,4 +59,16 @@ font-weight: 300;
 .recent-post{
   border-bottom: 1px solid #eee;
   margin:10px;
+}
+.post__header--title{
+  padding: 3rem;
+}
+.post__content--title{
+  font-size: 22px;
+  margin: 5rem 0;
+  font-weight: 700;
+  
+}
+.post__content--text{
+  line-height: 1.8;
 }

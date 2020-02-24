@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 
 import Card from '../UI/Card'
 import blogPost from '../../data/blog.json'
+import FbLogo from "../../assets/icons/fb.jpg"
+import InstaLogo from "../../assets/icons/instagram.png"
+import PinLogo from "../../assets/icons/pint.png"
 
 import './style.css'
 import { NavLink } from 'react-router-dom'
+
 
 const SideBar = (props) => {
 
@@ -31,8 +35,10 @@ const SideBar = (props) => {
         </div>
       </Card>
       <Card style={{ marginBottom: '20px', padding: '20px', boxSizing: 'border-box' }}>
-        <div className="sidebar_header">
-
+        <div className="sidebar_header--social">
+          <img className="sidebar_header--icon" src={FbLogo} alt="facebook logo"/>
+          <img className="sidebar_header--icon" src={InstaLogo} alt="instagram logo"/>
+          <img className="sidebar_header--icon" src={PinLogo} alt="piterest logo"/>
         </div>
       </Card>
       <Card style={{ marginBottom: '20px', padding: '20px', boxSizing: 'border-box' }}>
@@ -44,7 +50,7 @@ const SideBar = (props) => {
           posts.map(post => {
             return (
 
-              <NavLink key={post.id} to={`${post.id}`}>
+              <NavLink key={post.id} to={`/post/${post.id}`}>
                 <div className="sidebar__recent-posts">
                   <div className="recent-post">
                     <h3 className="recent-post__title">{post.blogTitle}</h3>

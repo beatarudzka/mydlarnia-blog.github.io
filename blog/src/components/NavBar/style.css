@@ -6,7 +6,7 @@
 
 .navbar__list{
   margin:0;
-  padding: 0;
+  padding-left: 3rem;
 }
 .navbar__list--item{
   display: inline-block;
@@ -20,7 +20,9 @@
   color:#565673;
   padding: 0 10px;
 }
-
+.search{
+  padding:1rem;
+}
 .search__form{
   display: flex;
 }
