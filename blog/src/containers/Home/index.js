@@ -12,50 +12,59 @@ import Sidebar from './../../components/SideBar'
 import RecentPosts from './RecentPosts'
 
 
-const SideImage = props => {
-  return(
-    <div style={{height:`${props.height}px`}}>
-      <img src={props.src} alt=""/>
-    </div>
-  )
-}
 
 const Home = props => {
 
-  const GalleryHeight = 600
-  const GalleryStyle={
-    height:GalleryHeight+'px',
-    overflow:'hidden'
-  }
-
  
   return (
-    <>
- 
-      <div className="PostGallery" style={GalleryStyle}>
-        <section className="MainGallery">
-         <div className="MainGallery__container">
-           <img className="MainGallery--image" src={img4} alt="Soaps"/>
-         </div>
-        </section>
-        
-        <section className="SideGallery" >
-        <div className="SideGallery__container" >
-           <img className="SideGallery--image" src={img2} alt="Flowers"/>
-         </div>
-         <div className="SideGallery__container">
-           <img className="SideGallery--image" src={img3} alt="Soap brown"/>
-         </div>
-         <div className="SideGallery__container">
-           <img className="SideGallery--image" src={img5} alt="Flowers"/>
-         </div>
-        </section>
-      </div>
+<>
+    <div class="grid">
+					<figure class="effect-lily">
+						<img src={img4} alt="Handmade soap"/>
+						<figcaption>
+							<div>
+								<h2>Ręcznie robione <span> Mydła</span></h2>
+								<p>Poznaj tajniki wyrobu własnego mydła</p>
+							</div>
+							<a href="#">Zobacz</a>
+						</figcaption>			
+					</figure>
+					<figure class="effect-lily">
+						<img src={img2} alt="Herbs"/>
+						<figcaption>
+							<div>
+								<h2>Wiedza o <span> ziołach</span></h2>
+								<p>Właściwości roślin zielarskich</p>
+							</div>
+							<a href="#">Zobacz</a>
+						</figcaption>			
+					</figure>
+          <figure class="effect-lily">
+						<img src={img3} alt="Eco cosmetics"/>
+						<figcaption>
+							<div>
+								<h2>Eko <span> Kosmetyki</span></h2>
+								<p>Receptury do wykonania w domowym zaciszu</p>
+							</div>
+							<a href="#">Zobacz</a>
+						</figcaption>			
+					</figure>
+          <figure class="effect-lily">
+						<img src={img4} alt="Garden"/>
+						<figcaption>
+							<div>
+								<h2>Ekologiczny <span> Ogród</span></h2>
+								<p>Zajrzyj do mojego ekologicznego ogrodu</p>
+							</div>
+							<a href="#">Zobacz</a>
+						</figcaption>			
+					</figure>
+				</div>
 
-      <div className="HomeContainer">
+      {/* <div className="HomeContainer">
         <Sidebar/>
         <RecentPosts/>
-      </div>
+      </div> */}
     </>
 
   )

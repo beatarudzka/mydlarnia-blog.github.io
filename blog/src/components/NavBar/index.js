@@ -24,10 +24,11 @@ const NavBar = (props) => {
     <>
       <div className="navbar">
         <ul className="navbar__list">
-          {/* <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/post">Blog</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/post">Blog</NavLink></li>
           <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/zielarstwo">Zielarstwo</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/mydla">Mydła</NavLink></li>
           <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/permakultura">Permakultura</NavLink></li>
-          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/aromaterapia">Aromaterapia</NavLink></li> */}
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/kosmetyki">Kosmetyki</NavLink></li>
         </ul>
         <div className="search">
           <form className="search__form" onSubmit={submitSearch}>
