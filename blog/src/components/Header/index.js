@@ -1,16 +1,19 @@
 import React from 'react'
 import './style.css'
 
+import { NavLink } from 'react-router-dom'
+
 const Header = (props) => {
   return (
     <header className="header">
-      <nav className="header__menu">
-        <li className="header__menu--link" href="#">Receptury</li>
-        <li className="header__menu--link" href="#">Mydła hand made</li>
-        <li className="header__menu--link" href="#">Zioła</li>
-      </nav>
-      <div className="header__social-media">
-
+      <div className="navbar">
+        <ul className="navbar__list">
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/post">Blog</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/zielarstwo">Zielarstwo</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/mydla">Mydła</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/permakultura">Permakultura</NavLink></li>
+          <li className="navbar__list--item"><NavLink className="navbar__list--link" to="/kosmetyki">Kosmetyki</NavLink></li>
+        </ul>
       </div>
     </header>
   )

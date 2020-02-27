@@ -4,17 +4,15 @@
   margin: 10px 0;
 }
 
-.header__menu--link{
-  display:inline-block;
-  margin: 0 10px;
-  text-decoration: none;
-  color:#565673;
-  font-size: 4px;
-  letter-spacing: 1.2px;
-  
+.navbar__list--item{
+  display: inline-block;
 }
-
-.header__menu--link:hover{
-  border: black solid 1px;
-  cursor: pointer;
+.navbar__list--link{
+  text-decoration: none;
+  display: block;
+  font-size: .9rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color:#565673;
+  padding: 0 10px;
 }
