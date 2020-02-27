@@ -19,6 +19,10 @@ const NavBar = (props) => {
     setSearch(true)
   }
 
+  const searchText = () =>{
+    
+  }
+
   return (
     <>
         <div className="search">
